@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorted Band List</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Sorted Band List</h1>
-    <ul id="band"></ul>
+    <ul id="bands"></ul> <!-- Corrected the ID here -->
 
     <script>
         const bands = [
@@ -34,7 +33,7 @@
         const sortedBands = bands.slice().sort((a, b) => strip(a).localeCompare(strip(b)));
 
         // Add to the DOM
-        const ul = document.getElementById('band');
+        const ul = document.getElementById('bands');
         
         sortedBands.forEach(band => {
             const li = document.createElement('li');
